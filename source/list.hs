@@ -15,3 +15,23 @@ addEndList x y = x ++ y
 -- x lista
 -- y elemento
 elementList x y = x !! y
+
+-- head [5, 4, 3, 2, 1]
+-- 5
+
+-- tail [5, 4, 3, 2, 1]
+-- [4, 3, 2, 1]
+
+-- last [5, 4, 3, 2, 1]
+-- 1
+
+-- init [5, 4, 3, 2, 1]
+-- [5, 4, 3, 2]
+
+-- length [6, 6, 6]
+-- 3
+
+-- null [1, 2, 3]
+-- False
+-- null []
+-- True
