@@ -13,15 +13,16 @@
 
 bis :: (Integral x) => x -> x
 bis x  
-    | x `mod` 4 == 0 && x `mod` 100 /= 0 = 1
+    | aux = 1
     | x `mod` 400 == 0 = 1
     | otherwise   = 0
+    where aux = x `mod` 4 == 0 && x `mod` 100 /= 0
 
 -- Retorna quantidade de dias no ano x
 diy :: (Integral x) => x -> x
 diy x
-	| bis x == 1 = 366
-	| otherwise  = 365
+    | bis x == 1 = 366
+    | otherwise  = 365
 
 -- Informa quantidade de dias que há somando determinados anos
 days x = sum [diy s | s <- x]

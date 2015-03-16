@@ -52,7 +52,7 @@ bis x = if (x `mod` 4 == 0) && (x `mod` 100 /= 0)
 
 -- Retorna quantidade de dias no ano x
 -- Days in year
-diy x = if bis x == 1
+diy x = if bis x == 1s
 			then 366
 			else 365
 
