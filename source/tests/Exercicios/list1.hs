@@ -32,7 +32,8 @@ sum' [] = 0
 sum' (x:xs) = x + sum' xs
 
 length' :: (RealFloat a) => [a] -> a
-length' x = sum [1 | _ <- x]
+length' [] = 0
+length' x  = sum [1 | _ <- x]
 
 questao5 :: [Float] -> Float
 questao5 x = sum' x / length' x
