@@ -61,3 +61,22 @@ basic x = sum [x | x <- x]
 -- É como o tipo genérico de outras linguagens. Desse modo eu posso
 -- escrever uma função capaz de funcionar com diversos tipos que
 -- passem pelo mesmo procedimento.
+
+-- Criando tipos de dados
+type Nome = String
+type Idade = Int
+type Lingua = String
+
+type Pessoa = (Nome, Idade, Lingua)
+
+pessoa :: Pessoa
+pessoa = ("Joao", 17, "Portugues")
+
+nomepessoa :: Pessoa -> Nome
+nomepessoa (n, _, _) = n
+
+idadepessoa :: Pessoa -> Idade
+idadepessoa (_, i, _) = i
+
+linguapessoa :: Pessoa -> Lingua
+linguapessoa (_, _, l) = l

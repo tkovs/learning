@@ -9,7 +9,17 @@ pair i
 	| mod i 2 == 0 = "Pair"
 	| otherwise = "Odd"
 
+max' :: (Integral) x => x -> x -> x
+max' x y
+	| x > y = x
+	| otherwise = y
 
+foo :: (Integral x) => [x] -> x
+foo [x]    = x
+foo (x:xs) = max' x (foo xs)
+--	| x > foo xs = x
+--	| otherwise = foo xs
+--  | max x foo xs
 
 -- 	unsigned int factorial(unsigned int n) {
 -- 		if (n == 0)	return 1;
