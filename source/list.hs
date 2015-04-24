@@ -35,3 +35,22 @@ elementList x y = x !! y
 -- False
 -- null []
 -- True
+
+-- Função que recebe uma lista e retorna o inverso da mesma
+-- Exemplo de entrada: [1,2,3]
+-- Exemplo de saída: [3,2,1]
+-- Método 1
+
+inverso_auxiliar :: [x] -> [x] -> [x]
+inverso_auxiliar [] l_inv     = l_inv
+inverso_auxiliar (x:xs) l_inv = inverso_auxiliar xs l_inv++[x]
+
+inverso_lista1 :: [x] -> [x]
+inverso_lista1 [] = []
+inverso_lista1 l  = inverso_auxiliar l []
+
+-- Método 2
+
+inverso_lista2 :: [x] -> [x]
+inverso_lista2 []     = []
+inverso_lista2 (x:xs) = inverso_lista2 xs ++ [x]
