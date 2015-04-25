@@ -51,6 +51,64 @@ inverso_lista1 l  = inverso_auxiliar l []
 
 -- Método 2
 
-inverso_lista2 :: [x] -> [x]
-inverso_lista2 []     = []
-inverso_lista2 (x:xs) = inverso_lista2 xs ++ [x]
+inverso :: [x] -> [x]
+inverso []     = []
+inverso (x:xs) = inverso xs ++ [x]
+
+{-
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = inverso[3,4] ++ [2]
+inverso [3,4] = inverso [4] ++ [3]
+inverso [4] = inverso [] ++ 4
+inverso [] = []
+
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = inverso[3,4] ++ [2]
+inverso [3,4] = inverso [4] ++ [3]
+inverso [4] = [] ++ [4]
+inverso [] = []
+
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = inverso[3,4] ++ [2]
+inverso [3,4] = inverso [4] ++ [3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = inverso[3,4] ++ [2]
+inverso [3,4] = [4] ++ [3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = inverso[3,4] ++ [2]
+inverso [3,4] = [4,3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = [4,3] ++ [2]
+inverso [3,4] = [4,3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
+inverso [2,3,4] = [4,3,2]
+inverso [3,4] = [4,3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = [4,3,2] ++ [1]
+inverso [2,3,4] = [4,3,2]
+inverso [3,4] = [4,3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = [4,3,2,1]
+inverso [2,3,4] = [4,3,2]
+inverso [3,4] = [4,3]
+inverso [4] = [4]
+inverso [] = []
+
+inverso [1,2,3,4] = [4,3,2,1]
+-}
