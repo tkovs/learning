@@ -139,6 +139,14 @@ soma :: [Int] -> Int
 soma [] = 0
 soma (x:xs) = x + soma xs
 
+-- Ordenando lista com Quicksort
+
+quicksort [] = []
+quicksort (p:xs) = (quicksort lesser) ++ [p] ++ (quicksort greater)
+	where
+	  lesser = filter (< p) xs
+	  greater = filter (>= p) xs
+
 -- Ordenar lista de maneira simples de entender mas verbosa
 
 lista :: [Int]

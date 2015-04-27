@@ -1,6 +1,6 @@
 ## LEARNING
 
-I'm learning haskell, so get ready to see horrible codes (whitout FP maybe D:).
+I'm learning haskell, so get ready to see horrible codes.
 
 ## Start
 
