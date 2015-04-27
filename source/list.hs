@@ -138,3 +138,28 @@ todos_pares (x:xs)
 soma :: [Int] -> Int
 soma [] = 0
 soma (x:xs) = x + soma xs
+
+-- Ordenar lista de maneira simples de entender mas verbosa
+
+lista :: [Int]
+lista = [1, 3, 6, 4, 9, 8, 7, 2, 5]
+
+menor :: [Int] -> Int
+menor [x] = x
+menor (x:xs)
+	| (x < menor xs) = x
+	| otherwise = menor xs
+
+remove_menor :: [Int] -> [Int]
+remove_menor [] = []
+remove_menor all@(x:xs)
+	| (x == menor all) = xs
+	| otherwise = x : remove_menor xs
+
+ordena :: [Int] -> [Int]
+ordena [] = []
+ordena lista = ordena_auxiliar [] lista
+
+ordena_auxiliar :: [Int] -> [Int] -> [Int]
+ordena_auxiliar ordenada [] = ordenada
+ordena_auxiliar ordenada all@(x:xs) = ordena_auxiliar (ordenada ++ [menor all]) (remove_menor (x:xs))
