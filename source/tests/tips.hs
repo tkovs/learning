@@ -2,17 +2,17 @@
 -- Test: ghci> pair n
 -- It's a simple example, but it can be used in complex problems.
 
-n = 10
+n = 1
 
 pair :: (Integral i) => i -> String
 pair i
-	| mod i 2 == 0 = "Pair"
-	| otherwise = "Odd"
+    | mod i 2 == 0 = "Pair"
+    | otherwise = "Odd"
 
 max' :: (Integral) x => x -> x -> x
 max' x y
-	| x > y = x
-	| otherwise = y
+    | x > y = x
+    | otherwise = y
 
 foo :: (Integral x) => [x] -> x
 foo [x]    = x
@@ -31,3 +31,23 @@ foo (x:xs) = max' x (foo xs)
 -- 		| zero      = 1
 -- 		| otherwise = i * factorial (i - 1)
 -- 		where zero = i == 0
+
+-- if (example)
+bigger :: Int -> Int -> Int
+bigger x y = if x > y
+                 then x 
+                 else y
+
+-- case (example)
+bigger' :: Int -> Int -> Int
+bigger' x y = case question of
+                True -> x
+                False -> y
+                where question = (x > y)
+
+-- guards (example)
+bigger'' :: Int -> Int -> Int
+bigger'' x y
+    | x > y     = x
+    | otherwise = y
+
