@@ -51,3 +51,8 @@ bigger'' x y
     | x > y     = x
     | otherwise = y
 
+-- lambda function
+half :: [Double] -> [Double]
+half [] = []
+half a = map func a
+        where func = (\x -> x / 2)
