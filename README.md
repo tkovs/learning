@@ -1,7 +1,1 @@
-## LEARNING
-
-I'm learning haskell, so get ready to see horrible codes.
-
-## Start
-
-    02/22/2015
+![me](http://i465.photobucket.com/albums/rr14/themishkin/Spiderman/fuck-you-im-spider-man-60s-spiderma.jpg)
