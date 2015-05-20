@@ -1,5 +1,5 @@
-oddNumbers = [1, 3, 5, 7, 9]
-pairNumbers = [2, 4, 6, 8, 10]
+list :: [Int]
+list = [1, 3, 6, 4, 9, 8, 7, 2, 5]
 
 -- Adicionar no início da lista
 -- x valor
@@ -36,6 +36,7 @@ elementList x y = x !! y
 -- null []
 -- True
 
+{- ######################################################################### -}
 -- Função que recebe uma lista e retorna o inverso da mesma
 -- Exemplo de entrada: [1,2,3]
 -- Exemplo de saída: [3,2,1]
@@ -55,64 +56,7 @@ inverso :: [x] -> [x]
 inverso []     = []
 inverso (x:xs) = inverso xs ++ [x]
 
-{-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = inverso[3,4] ++ [2]
-inverso [3,4] = inverso [4] ++ [3]
-inverso [4] = inverso [] ++ 4
-inverso [] = []
-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = inverso[3,4] ++ [2]
-inverso [3,4] = inverso [4] ++ [3]
-inverso [4] = [] ++ [4]
-inverso [] = []
-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = inverso[3,4] ++ [2]
-inverso [3,4] = inverso [4] ++ [3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = inverso[3,4] ++ [2]
-inverso [3,4] = [4] ++ [3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = inverso[3,4] ++ [2]
-inverso [3,4] = [4,3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = [4,3] ++ [2]
-inverso [3,4] = [4,3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = inverso [2,3,4] ++ [1]
-inverso [2,3,4] = [4,3,2]
-inverso [3,4] = [4,3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = [4,3,2] ++ [1]
-inverso [2,3,4] = [4,3,2]
-inverso [3,4] = [4,3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = [4,3,2,1]
-inverso [2,3,4] = [4,3,2]
-inverso [3,4] = [4,3]
-inverso [4] = [4]
-inverso [] = []
-
-inverso [1,2,3,4] = [4,3,2,1]
--}
-
+{- ######################################################################### -}
 -- Verifica se x lista possue y elemento
 possue :: [Int] -> Int -> Bool
 possue [] _ = False
@@ -139,6 +83,7 @@ soma :: [Int] -> Int
 soma [] = 0
 soma (x:xs) = x + soma xs
 
+{- ######################################################################### -}
 -- Ordenando lista com Quicksort
 
 quicksort [] = []
@@ -147,10 +92,8 @@ quicksort (p:xs) = (quicksort lesser) ++ [p] ++ (quicksort greater)
 	  lesser = filter (< p) xs
 	  greater = filter (>= p) xs
 
+{- ######################################################################### -}
 -- Ordenar lista de maneira simples de entender mas verbosa
-
-lista :: [Int]
-lista = [1, 3, 6, 4, 9, 8, 7, 2, 5]
 
 menor :: [Int] -> Int
 menor [x] = x
@@ -170,4 +113,22 @@ ordena lista = ordena_auxiliar [] lista
 
 ordena_auxiliar :: [Int] -> [Int] -> [Int]
 ordena_auxiliar ordenada [] = ordenada
-ordena_auxiliar ordenada all@(x:xs) = ordena_auxiliar (ordenada ++ [menor all]) (remove_menor (x:xs))
+ordena_auxiliar ordenada all@(x:xs) = ordena_auxiliar auxiliar1 auxiliar2
+  where
+  	auxiliar1 = ordenada ++ [menor all] -- Evitando passar das 80 colunas
+  	auxiliar2 = (remove_menor (x:xs)) -- Não pensei em outro nome para isso, rs
+
+{- ######################################################################### -}
+-- Ordenar lista usando método de inserção direta
+
+-- -- Função para ordenar lista
+ordenaDir :: [Int] -> [Int]
+ordenaDir []     = []
+ordenaDir (x:xs) = insere x (ordenaDir xs)
+
+-- -- Insere ordenadamente
+insere :: Int -> [Int] -> [Int]
+insere x [] = [x]
+insere x all@(y:ys)
+    | x <= y    = x : all
+    | otherwise = y : insere x ys
