@@ -1,8 +1,13 @@
+tuple :: [(Int, Int)]
+tuple = [(1,2), (3,4), (5,6)]
+
 -- Listas são homogêneas, diferente de tuplas
+people :: (String, String, Int)
 people = ("Christopher", "Walken", 55)
 
 -- Não se compara tuplas de tamanhos diferentes,
 -- diferente de listas.
+comp :: Bool
 comp = ("Joao", 17) == ("Vitor", 11)
 -- ghci> comp
 -- False
@@ -10,11 +15,23 @@ comp = ("Joao", 17) == ("Vitor", 11)
 -- fst e snd retornam, respectivamente, o primeiro e
 -- o segundo elemento da tupla. Funcionam apenas com
 -- tuplas com dois elementos
+ex :: (Int, String)
 ex = (2015, "Fevereiro")
 -- ghci> fst ex
 -- 2015
 -- ghci> snd ex
 -- "Fevereiro"
+
+-- Reescrevendo a função zip
+zip' :: [a] -> [b] -> [(a,b)]
+zip' (a:b) (c:d) = (a,c) : zip' b d
+zip' _ _ = []
+
+-- Reescrevendo a função unzip
+-- -- [(1,2), (3,4), (5,6)]
+-- -- ([1,3,5], [2,4,6])
+unzip' :: [(a, b)] -> ([a], [b])
+unzip' a = (map (fst) a, map(snd) a)
 
 -- Funçao que produz lista de pares: zip
 -- ghci> zip [1, 2, 3] [11, 12, 13]
@@ -27,9 +44,10 @@ myzip = zip number word
 -- ghci> myzip
 -- [(1,"um"),(2,"dois"),(3,"tres"),(4,"quatro"),(5,"cinco")]
 
--- Não é possível zip lista finita com lista infinita
+-- Não é possível zip lista finita com lista infinita, quando a lista finita
+-- chegar no fim a função zip acaba
 -- ghci> zip [1..] ["banana", "laranja", "melancia", "uva"]  
--- [(1,"banana"),(2,"laranja"),(3,"melancia"),(4,"uva")] 
+-- [(1,"banana"),(2,"laranja"),(3,"melancia"),(4,"uva")]
 
 -- "Que triângulo retângulo que tem números inteiros para 
 -- todos os lados e todos os lados iguais ou menores que 10 
