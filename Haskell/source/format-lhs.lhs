@@ -22,4 +22,5 @@ Minha função map
 
 > map' :: (x -> y) -> [x] -> [y]
 > map' _ []     = []
-> map' f (x:xs) = (f x) : (map' f xs)
+> map' f (x:xs) = (f x) : (map' f xs) -- Ou map' f x = [f x | x <- x]
+  

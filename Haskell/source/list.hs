@@ -1,3 +1,5 @@
+module ModuleList where
+
 list :: [Int]
 list = [1, 3, 6, 4, 9, 8, 7, 2, 5]
 
@@ -36,7 +38,7 @@ elementList x y = x !! y
 -- null []
 -- True
 
-{- ######################################################################### -}
+{- ------------------------------------------------------------------------- -}
 -- Função que recebe uma lista e retorna o inverso da mesma
 -- Exemplo de entrada: [1,2,3]
 -- Exemplo de saída: [3,2,1]
@@ -56,7 +58,7 @@ inverso :: [x] -> [x]
 inverso []     = []
 inverso (x:xs) = inverso xs ++ [x]
 
-{- ######################################################################### -}
+{- ------------------------------------------------------------------------- -}
 -- Verifica se x lista possue y elemento
 possue :: [Int] -> Int -> Bool
 possue [] _ = False
@@ -83,7 +85,7 @@ soma :: [Int] -> Int
 soma [] = 0
 soma (x:xs) = x + soma xs
 
-{- ######################################################################### -}
+{- ------------------------------------------------------------------------- -}
 -- Ordenando lista com Quicksort
 
 quicksort [] = []
@@ -92,7 +94,7 @@ quicksort (p:xs) = (quicksort lesser) ++ [p] ++ (quicksort greater)
 	  lesser = filter (< p) xs
 	  greater = filter (>= p) xs
 
-{- ######################################################################### -}
+{- ------------------------------------------------------------------------- -}
 -- Ordenar lista de maneira simples de entender mas verbosa
 
 menor :: [Int] -> Int
@@ -118,7 +120,7 @@ ordena_auxiliar ordenada all@(x:xs) = ordena_auxiliar auxiliar1 auxiliar2
   	auxiliar1 = ordenada ++ [menor all] -- Evitando passar das 80 colunas
   	auxiliar2 = (remove_menor (x:xs)) -- Não pensei em outro nome para isso, rs
 
-{- ######################################################################### -}
+{- ------------------------------------------------------------------------- -}
 -- Ordenar lista usando método de inserção direta
 
 -- -- Função para ordenar lista
