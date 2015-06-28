@@ -19,3 +19,6 @@ smallest x
   	where next = x + 20
 
 main = putStrLn $ show $ smallest 20
+
+-- It's better hahaha
+-- main = putStrLn $ show $ foldr1 lcm [3,5,7,11,13,16,17,18,19]
