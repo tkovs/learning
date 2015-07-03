@@ -1,2 +1,6 @@
 #Compile all programs with test string -> ./test
 test
+
+#Haskell build
+.hi
+.o
