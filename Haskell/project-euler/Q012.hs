@@ -21,15 +21,11 @@ What is the value of the first triangle number to have over five hundred
 divisors?
 -}
 
-triangle :: Int -> Int
-triangle x = sum [1..x]
+import Data.List (nub)
 
-divisors :: Int -> Int
-divisors x = length [y | y <- [1..(div x 2)] ++ [x], mod x y == 0]
+divisors :: Int -> [Int]
+divisors n = (1:) $ nub $ concat [[x, div n x] | x <- [2..limit], rem n x == 0 ]
+     where limit = (floor.sqrt.fromIntegral) n
 
-answer :: Int -> Int -> Int
-answer x limit
-	| (divisors $ triangle x) > limit = triangle x
-	| otherwise = answer (x + 1) limit
-
-main = putStrLn $ show $ answer 1 50
+main = putStrLn $ show $ head $ filter (key) $ scanl1 (+) [1..]
+         where key = (\x -> (length $ divisors x) > 500)
