@@ -2,5 +2,5 @@
 test
 
 #Haskell build
-.hi
-.o
+*.hi
+*.o
