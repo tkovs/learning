@@ -5,13 +5,4 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 Find the sum of all the multiples of 3 or 5 below 1000.
 -}
 
-multiples :: Int -> Int -> [Int]
-multiples n limit = [n | n <- [n, n+n..limit-1]]
-
-sum_multiples :: Int -> Int -> Int
-sum_multiples n limit = sum (multiples n limit)
-
-main = putStrLn $ show $ multiples3 + multiples5 - multiples15
-                           where multiples3  = sum_multiples 3 1000
-                                 multiples5  = sum_multiples 5 1000
-                                 multiples15 = sum_multiples 15 1000
+main = putStrLn $ show $ sum [x | x <- [1..999], mod x 3 == 0 || mod x 5 == 0]
