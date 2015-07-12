@@ -8,10 +8,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 -}
 
-fibonacci :: Int -> Int -> Int -> [Int]
-fibonacci limit a b
-  | next < limit = next : fibonacci limit b next
-  | otherwise = []
-    where next = a + b
+fibs :: [Integer]
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 
-main = putStrLn $ show $ sum $ filter (even) $ fibonacci 4000000 0 1
+main = putStrLn $ show $ sum $ filter even $ takeWhile (< 4000000) fibs
