@@ -12,12 +12,4 @@ Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum.
 -}
 
-sum_square :: Int -> Int
-sum_square 0 = 0
-sum_square x = sum $ map (\x -> x * x) [1..x]
-
-square_sum :: Int -> Int
-square_sum 0 = 0
-square_sum x = (sum [1..x]) ^ 2
-
-main = putStrLn $ show $ (square_sum 100) - (sum_square 100)
+main = putStrLn $ show $ ((sum [1..100]) ^ 2) - (sum $ map (\x -> x * x) [1..100])
