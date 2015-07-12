@@ -34,7 +34,7 @@ lengths = [(a, b) | a <- [1..], b <- [length $ collatz' a]]
 -- lengths = zip [1..] (map length $ map collatz' [1..])
 
 greater_sequence :: Int
-greater_sequence = head $ reverse $ sort $ snd $ unzip $ take 1000000 lengths
+greater_sequence = maximum $ snd $ unzip $ take 1000000 lengths
 
 main = putStrLn $ show $ seq !! index
 	     where
