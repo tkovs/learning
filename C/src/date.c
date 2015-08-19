@@ -8,12 +8,12 @@ int main(void) {
 		"April",     // 03
 		"May",       // 04
 		"June",      // 05
-	    "July",      // 06
-	    "August",    // 07
-	    "September", // 08
-	    "October",   // 09
-	    "November",  // 10
-	    "December"   // 11
+		"July",      // 06
+		"August",    // 07
+		"September", // 08
+		"October",   // 09
+		"November",  // 10
+		"December"   // 11
 	};
 
 	int day1, month1, year1;
