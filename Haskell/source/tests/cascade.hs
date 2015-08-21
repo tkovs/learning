@@ -1,8 +1,8 @@
 main = do
-	mapM_ putStrLn $ map space $ reverse $ lists 9
-		where 
-			space = (\x -> concat $ map (\x -> show x ++ " ") x)
-			lists = (\x -> map (\x -> [1..x]) [1..x])
+  mapM_ putStrLn $ map space $ reverse $ lists 9
+    where 
+      space = (\x -> concat $ map (\x -> show x ++ " ") x)
+      lists = (\x -> map (\x -> [1..x]) [1..x])
 
 {-
 output
