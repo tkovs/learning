@@ -1,5 +1,6 @@
 #Compile all programs with test string -> ./test
 test
+a.out
 
 #Windows build
 *.exe
@@ -7,3 +8,5 @@ test
 #Haskell build
 *.hi
 *.o
+
+*.ghc

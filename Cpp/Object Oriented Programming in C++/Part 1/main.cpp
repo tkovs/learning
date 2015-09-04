@@ -5,9 +5,11 @@ using namespace std;
 
 int main(void)
 {
-	Dog dog("Brenda", 4);
+	Dog dog1("Brenda", 4);
+	Dog dog2;
 
-	cout << "Name: " << dog.name << endl << "Age: " << dog.age << endl;
+	cout << "Name: " << dog1.name << endl << "Age: " << dog1.age << endl;
+	cout << "Name: " << dog2.name << endl << "Age: " << dog2.age << endl;
 
 	return 0;
 }
