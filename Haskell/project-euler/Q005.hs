@@ -14,7 +14,7 @@ foo x (y:ys)
 
 smallest :: Int -> Int
 smallest x
-  | foo x [1..20] == True = x
+  | foo x [11..20] == True = x
   | otherwise = smallest next
   	where next = x + 20
 
