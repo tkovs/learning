@@ -7,7 +7,7 @@ Dog::Dog(std::string _name, int _age)
 	age = _age;
 }
 
-void Dog::bark()
+void Dog::bark() const
 {
 	std::cout << "Woof! My name is " << name << " and I'm " << age << " years old." << std::endl;
 }
