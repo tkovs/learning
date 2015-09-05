@@ -1,10 +1,9 @@
 #include <iostream>
 #include "dog.h"
 
-Dog::Dog(std::string _name, int _age)
+Dog::Dog(std::string _name, int _age) : name(_name), age(_age)
 {
-	name = _name;
-	age = _age;
+	// None
 }
 
 void Dog::bark() const
