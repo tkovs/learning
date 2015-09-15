@@ -17,7 +17,7 @@ main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp -o $(OUTPUT)/main.o
 
 main: principal.o placar.o menormaior.o main.o
-	$(CC) $(OUTPUT)/*.o -o main
+	$(CC) $(OUTPUT)/*.o -o main.out
 
 clean:
-	-rm -f $(OUTPUT)/*.o main
+	-rm -f $(OUTPUT)/*.o main.out
