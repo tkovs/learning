@@ -1,6 +1,6 @@
 #Compile all programs with test string -> ./test
+*.out
 test
-a.out
 
 #Windows build
 *.exe
@@ -11,3 +11,4 @@ a.out
 
 *.ghc
 *.class
+.build/
