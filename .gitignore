@@ -11,4 +11,7 @@ test
 
 *.ghc
 *.class
+
+#Arduino
 .build/
+Arduino/*/resultado/*.avi
