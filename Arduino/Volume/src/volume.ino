@@ -17,23 +17,20 @@ int indice = 0;
 */
  
 void setup() {
-  Serial.begin(9600);
+
 }
  
 void loop() {
   valorSensor = analogRead(analogPino);
   indice = map(valorSensor, 0, 1023, -1, 5);
- 
+
   volume(indice);
- 
   delay(30);
 }
  
 void apagatudo() {
-  int i = 0;
- 
-  while (i < PINOS)
-    analogWrite(pinosLeds[i++], 0);
+  for (int i = 0; i < PINOS; i++)
+    analogWrite(pinosLeds[i], 0);
 }
 
 
