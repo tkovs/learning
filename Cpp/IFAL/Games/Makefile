@@ -17,7 +17,7 @@ main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp -o $(OUTPUT)/main.o
 
 main: principal.o placar.o menormaior.o main.o
-	$(CC) $(OUTPUT)/*.o -o main.out
+	$(CC) $(OUTPUT)/*.o -o game
 
 clean:
-	-rm -f $(OUTPUT)/*.o main.out
+	-rm -f $(OUTPUT)/*.o game
