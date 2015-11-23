@@ -26,11 +26,9 @@ foo (x:xs) = max' x (foo xs)
 -- 		return = n * factorial(n - 1)
 -- 	}
 
--- 	factorial :: (Integral i) => i -> i
--- 	factorial i
--- 		| zero      = 1
--- 		| otherwise = i * factorial (i - 1)
--- 		where zero = i == 0
+-- 	factorial :: Int -> Int
+-- 	factorial 0 = 1
+--  factorial n = n * factorial (n - 1)
 
 -- if (example)
 bigger :: Int -> Int -> Int
