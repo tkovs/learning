@@ -9,9 +9,9 @@ alfabeto = ['a'..'z']
 odds = [1, 3 .. 100]
 
 -- Decrescente
--- errado
--- dec = [20..1]
--- correto
+-- errado:
+-- 	dec = [20..1]
+-- correto:
 dec = [20, 19 .. 1]
 
 -- Primeiros 20 múltiplos de 15

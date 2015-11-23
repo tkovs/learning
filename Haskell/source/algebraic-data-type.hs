@@ -41,3 +41,9 @@ reverseH image = reverse image
 -- Espelha imagem verticalmente
 reverseV :: Image -> Image
 reverseV image = map reverse image
+
+main = do
+   mapM_ putStr $ map (\x -> x ++ "\n") image
+   mapM_ putStr $ map (\x -> x ++ "\n") $ reverseH image
+   mapM_ putStr $ map (\x -> x ++ "\n") $ reverseV image
+   mapM_ putStr $ map (\x -> x ++ "\n") $ reverseV $ reverseH image
