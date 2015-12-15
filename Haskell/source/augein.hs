@@ -88,19 +88,42 @@ cidade = ["Arapiraca",
 		  "Atalaia",
 		  "Sao Sebastiao"]
 
+cpf = ["18249332734",
+       "11847583953",
+       "17384783412",
+       "34817394854",
+       "19283795847",
+       "10697857493",
+       "18385776893",
+       "19387698472",
+       "18400928374",
+       "38498695847",
+       "81737484716",
+       "83759696953",
+       "84850999827",
+       "84875893833",
+       "18575584858",
+       "19868592763",
+       "11235516661",
+       "11895847283",
+       "29485765284",
+       "84857482545",
+       "03958756487",
+       "98823865874"]
+
 -- INSERT INTO cliente (nome, cidade, telefone) VALUES (nomes, cidades, telefones)
 
-str1 = "INSERT INTO cliente (nome, cidade, telefone) VALUES ("
+str1 = "INSERT INTO cliente VALUES ("
 str2 = ", "
 str3 = ");\n"
 
 generate :: Int -> [String] -> [String] -> [String] -> [String]
 generate 0 _ _ _ = []
-generate count (n:ns) (c:cs) (t:ts) = [insert] ++ generate (count-1) ns cs ts
+generate count (c:cs) (n:ns) (t:ts) = [insert] ++ generate (count-1) cs ns ts
 	where insert = str1 ++ n ++ str2 ++ c ++ str2 ++ t ++ str3
 generate _ [] _ _ = []
 generate _ _ [] _ = []
 generate _ _ _ [] = []
 
 main = do
-	mapM_ putStr $ generate 10 nome cidade telefone
+	mapM_ putStr $ generate 20 nome cpf telefone
