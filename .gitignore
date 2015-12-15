@@ -2,6 +2,8 @@
 *.out
 test
 
+*.swp
+
 #Windows build
 *.exe
 
