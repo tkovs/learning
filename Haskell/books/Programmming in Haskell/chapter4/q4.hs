@@ -7,4 +7,4 @@
 -}
 
 (∧) :: Bool -> Bool -> Bool
-(∧) a b = if (a == True) then b else False
+(∧) b b' = if b then b' else False
