@@ -1,0 +1,15 @@
+li {
+	color: blue;
+}
+
+/*
+	Comentários escritos entre barra e asterisco
+*/
+#segundo {
+	color: green;
+}
+
+/* Apenas os elementos do tipo a usarao essa classe */
+a.item-teste{
+	color: gray;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- Modo mais indicado e correto de se usar css -->
+		<link rel="stylesheet" type="text/css" href="css/primeiro-estilo.css">
+		<!-- Outro modo de se usar -->
+		<style type="text/css">
+			a {
+				text-decoration: none;
+			}
+		</style>
+		<title>Primeiro estilo css</title>
+	</head>
+	<body>
+		<h1>Página com estilo CSS</h1>
+		<p><a href="listas.html">Listas</a></p>
+		<!-- Outro modo, mas... -->
+		<!-- Não recomendado adicionar css assim: -->
+		<p><a href="listas.html" style="color: red;">Listas</a></p>
+
+		<ul>
+			<!-- Uma classe pode ser usada em n elementos-->
+			<li class="item-teste">Primeiro item da lista</li>
+			<!-- Um id só pode ser usado em 1 tag -->
+			<li id="segundo">Segunda item da lista</li>
+			<li class="item-teste">Terceiro item da lista</li>
+			<li>Quarto item da lista</li>
+		</ul>
+	</body>
+</html>
