@@ -1,0 +1,27 @@
+#wrap {
+	width: 960px;
+	margin: auto;
+	padding: 10px 20px;
+}
+
+label, input[type="submit"], input[type="text"], textarea {
+	display: block;
+}
+
+textarea {
+	width: 200px;
+	height: 80px;
+}
+
+input[type="submit"] {
+	background: black;
+	color: white;
+	width: 90px;
+	height: 30px;
+	margin: 10px 120px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background: orange;
+}
