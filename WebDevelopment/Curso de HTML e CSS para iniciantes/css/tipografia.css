@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
+#wrap {
+	width: 1100px;
+	margin: auto;
+	padding: 10px 20px;
+	overflow: hidden;
+}
+
+h1 {
+	color: rgb(100, 80, 255);
+	letter-spacing: -2px;
+	text-transform: capitalize;
+	text-shadow: 3px 2px 1px rgb(30, 30, 50);
+	text-align: center;
+}
+
+.p1 {
+	color: orange;
+}
+
+p {
+	text-indent: 50px;
+	text-align: justify;
+	font-size: 24px;
+	font-family: 'Patrick Hand SC', cursive;
+}
