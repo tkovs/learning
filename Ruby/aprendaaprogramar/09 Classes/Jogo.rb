@@ -1,28 +1,42 @@
 class Jogo
-  def initialize(limite = 1000)
-     @limite = limite
-     self.sortear()
+  attr_reader(:limite, :sorteio, :tentativas)
+
+  def initialize(limite = 1000, tentativas = 10)
+    @limite = limite
+    @tentativas = tentativas
+    self.sortear()
   end
 
   def sortear()
-     @sorteio = 1 + rand(@limite)
+    @sorteio = 1 + rand(@limite)
   end
 
-  def dica(_tentativa)
-     return '=> [Dica: x é maior que ' + _tentativa.to_s() + ']' if (@sorteio > _tentativa)
-     return '=> [Dica: x é menor que ' + _tentativa.to_s() + ']' if (@sorteio < _tentativa)
+  def dica(tentativa)
+    return "=> Dica: x é maior que #{tentativa.to_s()}" if (@sorteio > tentativa)
+    return "=> Dica: x é menor que #{tentativa.to_s()}" if (@sorteio < tentativa)
   end
   
   def jogar()
-     print('Adivinhe o valor de x (1~' + @limite.to_s() + '): ')
-     _entrada = gets.to_i()
+    puts("=> Tentativas restantes: #{@tentativas}")
+    print('Adivinhe o valor de x (1~' + @limite.to_s() + '): ')
+    entrada = gets.to_i()
+    @tentativas = @tentativas - 1
 
-     while (_entrada != @sorteio)
-        puts(self.dica(_entrada))
-        print('Insira um novo valor (1~' + @limite.to_s() + '): ')
-        _entrada = gets.to_i()
-     end
+    while (entrada != @sorteio)
+      puts(self.dica(entrada))
+      
+      if (@tentativas == 0)
+        print('Infelizmente você perdeu :(')
+        return()
+      end
 
-     print('Parabéns! Você venceu.')
+      puts("=> Tentativas restantes: #{@tentativas}")
+
+      print('Insira um novo valor (1~' + @limite.to_s() + '): ')
+      entrada = gets.to_i()
+      @tentativas = @tentativas - 1
+    end
+
+    puts('Parabéns! Você venceu, restando mais ' + @tentativas.to_s() + '.')
   end
 end
