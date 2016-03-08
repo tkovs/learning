@@ -1,5 +1,5 @@
 class Jogo
-  def initialize(limite = 50)
+  def initialize(limite = 1000)
      @limite = limite
      self.sortear()
   end
