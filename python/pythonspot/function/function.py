@@ -15,6 +15,14 @@ def map(f, lista):
 def filter(f, lista):
     return [x for x in lista if f(x)]
 
-print(soma(3, 9))
-print(map(dobro, numeros))
-print(filter(par, numeros))
+def head(lista):
+    return lista[:1]
+
+def tail(lista):
+    return lista[1:]
+
+print("Números ...... " + str(numeros))
+print("Soma ......... " + str(soma(3, 9)))
+print("Map dobro .... " + str(map(dobro, numeros)))
+print("Filter par ... " + str(filter(par, numeros)))
+print("Tail ......... " + str(tail(numeros)))
