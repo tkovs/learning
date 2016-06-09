@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 # Para reconhecer caracteres UTF-8, usa-se a linha abaixo, como diz a documentação
+# -*- coding: utf-8 -*-
 
 nome = "Joao Vitor Rodrigues da Silva"
 dia = "Quinta"
