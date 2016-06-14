@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Universal</title>
+    </head>
+
+    <body>
+        <p id='texto'>Javascript pode mudar sua página!</p>
+        <button type='button' onclick='change()'>Mudar</button>
+
+        <script type="text/javascript"> 
+            function change() {
+                paragrafo = document.getElementById('texto');
+                paragrafo.innerHTML = "Eu mudei. Eu sou Javascript. Eu sou a Universal.";
+            }
+        </script>
+    </body>
+</html>
