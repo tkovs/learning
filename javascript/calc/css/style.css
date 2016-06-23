@@ -6,3 +6,35 @@
 
     border-radius: 8px;
 }
+
+.button {
+    width: 70px;
+    height: 30px;
+    float: left;
+}
+
+.display {
+    width: 230px;
+    height: 30px;
+}
+
+.number {
+    background-color: white;
+}
+
+.reset {
+    background-color: red;
+}
+
+.operator {
+    background-color: green;
+}
+
+.equals {
+    background-color: blue;
+
+.row {
+    width: 270px;
+    margin: 15px auto;
+    overflow: auto;
+}
