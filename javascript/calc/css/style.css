@@ -3,10 +3,10 @@ body {
 }
 
 #calculator {
-	height: 400px;
+	height: 360px;
 	width: 320px;
 
-	background-color: CornflowerBlue;
+	background-color: #ccc1ba;
 
 	position: relative;
 	border-radius:5px;
@@ -27,12 +27,46 @@ body {
 	height: 31px;
 	width: 271px;
 
-	background-color: WhiteSmoke;
-	color: Black;
-	font-size: 21px;
+
+	background-color: #dfd788;
+	color: #556c7e;
+	font-size: 22px;
 	text-align: right;
 
 	position: relative;
 	left: 2px;
 	top: 2px;
+}
+
+#d_interface {
+	position: relative;
+	top: 20px;
+}
+
+.button {
+	font-size: 22px;
+	width: 52px;
+	height: 40px;
+	margin-left: 20px;
+
+	border: none;
+	border-radius: 10px;
+
+	border-bottom: gray 1px solid;
+	border-right: gray 1px solid;
+}
+
+.button.operator {
+	background-color: #5e5757;
+	color: White;
+}
+
+.button.number {
+	background-color: #dfd788;
+	color: #556c7e;
+}
+
+.button.quit {
+	background-color: #5e5757;
+	color: White;
 }
