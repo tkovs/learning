@@ -1,0 +1,38 @@
+body {
+	background-color: black;
+}
+
+#calculator {
+	height: 400px;
+	width: 320px;
+
+	background-color: CornflowerBlue;
+
+	position: relative;
+	border-radius:5px;
+}
+
+#d_display {
+	height:40px;
+	width:280px;
+
+	background-color: White;
+	
+	position:relative;
+	left: 20px;
+	top: 20px;
+}
+
+#i_display {
+	height: 31px;
+	width: 271px;
+
+	background-color: WhiteSmoke;
+	color: Black;
+	font-size: 21px;
+	text-align: right;
+
+	position: relative;
+	left: 2px;
+	top: 2px;
+}
