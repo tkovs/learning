@@ -27,7 +27,6 @@ body {
 	height: 31px;
 	width: 271px;
 
-
 	background-color: #dfd788;
 	color: #556c7e;
 	font-size: 22px;
@@ -41,13 +40,15 @@ body {
 #d_interface {
 	position: relative;
 	top: 20px;
+        padding: 0 20px;
 }
 
 .button {
 	font-size: 22px;
 	width: 52px;
 	height: 40px;
-	margin-left: 20px;
+
+        margin-left: 10px;
 
 	border: none;
 	border-radius: 10px;
