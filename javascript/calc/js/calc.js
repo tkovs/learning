@@ -1,23 +1,20 @@
-var expression = "";
+expression = "";
 
-function app(c) {
-    display = document.getElementById("i_display");
-
-    expression += c;
-    display.value = expression;
+function append(c) {
+    expression = expression.concat(c);
+    updateDisplay();
 }
 
-function erase() {
-    display = document.getElementById("i_display");
-
-    expression = "";
-    display.value = expression;
+function dot() {
+    if (getDisplay().value.indexOf('.') < 0) {
+        append('.');
+    }
 }
 
-function result() {
-    display = document.getElementById("i_display");
-
-    expression = eval(expression);
-    display.value = expression;
+function updateDisplay() {
+    getDisplay().value = expression;
 }
 
+function getDisplay() {
+    return document.getElementById("i_display");
+}
