@@ -33,12 +33,10 @@ function operator(op) {
 
 function result() {
     if (isOperator(expression.slice(-1)) == false) {
-        alert(expression);
         expression = eval(expression);
         getDisplay().value = expression;
     } else {
         expression += getDisplay().value;
-        alert(expression);
         expression = eval(expression);
         getDisplay().value = expression;
     }
