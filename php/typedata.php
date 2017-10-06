@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-	    <title>Hello, world!</title>
+	    <title>Tipos de dados</title>
 	</head>
 	<body>
 		<?php
