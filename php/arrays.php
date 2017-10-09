@@ -4,16 +4,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Arrays</title>
+
+		<?php require("utils.php"); ?>
 	</head>
 	<body>
 		<?php
-		function show_array($array, $breakline) {
-			$breakline ? $end = "<br />" : $end = " ";
-
-			foreach ($array as $element)
-				print($element . $end);
-		}
-
 		$numbers = array(1, 2, 3, 4, 5);
 		show_array($numbers, FALSE);
 		print ("<br />");
@@ -47,20 +42,6 @@
 				'B' => 0
 			)
 		);
-
-		function rgb_to_string($color) {
-			$red = $color['R'];
-			$green = $color['G'];
-			$blue = $color['B'];
-
-			return "($red, $green, $blue)";
-		}
-
-		function show_rgb_colors($colors) {
-			foreach ($colors as $key => $color) {
-				print("$key: " . rgb_to_string($color) . "<br />");
-			}
-		}
 
 		print(show_rgb_colors($colors));
 		?>
