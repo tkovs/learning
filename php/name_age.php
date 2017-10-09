@@ -7,18 +7,25 @@
 	</head>
 	<body>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-			Nome:<br />
-			<input type="text" name="nome" /><br>
-			Idade:<br />
-			<input type="text" name="idade" /><br>
+			<fieldset>
+				<legend>Dados pessoais</legend>
+				Nome:<br />
+				<input type="text" name="nome" /><br>
+				Idade:<br />
+				<input type="text" name="idade" /><br>
 
-			<input type="submit">
+				<input type="submit">
+			</fieldset>
 		</form>
 
 		<?php
 		if  (isset($_POST["nome"])) {
 			if (preg_match("/[^A-Za-z ]/", $_POST["nome"])) {
 				die("Nome inválido, deveria usar apenas caracteres.");
+			}
+
+			if ($_POST["idade"] < 0) {
+				die("Idade não pode ser inferior a 0");
 			}
 
 			print("Bem vindo " . $_POST['nome'] . "<br />");
