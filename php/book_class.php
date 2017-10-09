@@ -1,7 +1,8 @@
 <?php 
 class Book {
-	var $price;
-	var $title;
+	// Classes herdarão esses dados
+	protected $price;
+	protected $title;
 
 	function __construct($title, $price) {
 		$this->setTitle($title);
@@ -30,10 +31,15 @@ class Book {
 
 		return $summary;
 	}
+
+	// Apenas nessa classe
+	private function whoami() {
+		print("I AM A BOOK");
+	}
 }
 
 class Novel extends Book {
-	var $publisher;
+	private $publisher;
 
 	function __construct($title, $price, $publisher) {
 		$this->setTitle($title);
@@ -53,6 +59,7 @@ class Novel extends Book {
 		$this->price = $price * 1.50;
 	}
 
+	// Function overriding
 	function summary() {
 		$summary = "Title: $this->title<br />";
 		$summary .= "Price: R$ $this->price<br />";
