@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-	    <title>Comments</title>
+	    <title>Comentários</title>
 	</head>
 	<body>
 		<?php
