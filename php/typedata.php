@@ -36,6 +36,11 @@
 		print($literalmente);
 		$literalmente = "Meu nome é $nome.<br />";
 		print($literalmente);
+
+		define("YEAR", 2017);
+		print(YEAR . "<br />");
+		# YEAR = 4;
+		# Parse error: syntax error, unexpected '=' in [...]/typedata.php on line ...
 		?>
 	</body>
 </html>
