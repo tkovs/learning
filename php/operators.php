@@ -15,7 +15,7 @@
 
 		# Operadores de comparação: == != > < >= <=
 		# Operadores lógicos: and or && || !
-		# Operadores de atribuição: = += -= *= /= %=
+		# Operadores de atribuição: = += -= *= /= %= .=
 		# Operadores condicionais: "? :"
 		?>
 	</body>
