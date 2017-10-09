@@ -28,11 +28,20 @@
 				die("Idade não pode ser inferior a 0");
 			}
 
+			setcookie("nome", $_POST["nome"], time()+60);
+			setcookie("idade", $_POST["idade"], time()+60);
+			// Na primeira vez que definir o cookie, o if abaixo não funcionará.
+			// Portanto, repeti o código abaixo.
 			print("Bem vindo " . $_POST['nome'] . "<br />");
 			print("Você tem " . $_POST['idade'] . " anos.");
-
-			exit();
 		}
+
+		if (isset($_COOKIE["nome"])) {
+			print("Bem vindo " . $_COOKIE['nome'] . "<br />");
+			print("Você tem " . $_COOKIE['idade'] . " anos.");
+		}
+
+		exit();
 		?>
 	</body>
 </html>
