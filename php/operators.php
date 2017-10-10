@@ -8,12 +8,14 @@
 	<body>
 		<?php
 		// Operadores aritméticos: + - * / % ++ --
-		print(3 + 2);
-		print(4 % 2);
-		print(2 * 8);
-		print(665++);
+		print(3 + 2 . "<br />");
+		print(4 % 2 . "<br />");
+		print(2 * 8 . "<br />");
+		print((5 <=> 10) . "<br />");
+		print((50 <=> 10) . "<br />");
+		print((50 <=> 50) . "<br />");
 
-		// Operadores de comparação: == != > < >= <=
+		// Operadores de comparação: == != > < >= <= <=>
 		// Operadores lógicos: and or && || !
 		// Operadores de atribuição: = += -= *= /= %= .=
 		// Operadores condicionais: ?: ?? (from php7)
