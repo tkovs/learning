@@ -34,9 +34,7 @@
 			// Portanto, repeti o código abaixo.
 			print("Bem vindo " . $_POST['nome'] . "<br />");
 			print("Você tem " . $_POST['idade'] . " anos.");
-		}
-
-		if (isset($_COOKIE["nome"])) {
+		} else if (isset($_COOKIE["nome"])) {
 			print("Bem vindo " . $_COOKIE['nome'] . "<br />");
 			print("Você tem " . $_COOKIE['idade'] . " anos.");
 		}
