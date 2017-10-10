@@ -7,11 +7,11 @@
 	</head>
 	<body>
 		<?php
-		$idade = 20; # Integer
-		$ano_nascimento = 1997; # Integer
+		$idade = 20; // Integer
+		$ano_nascimento = 1997; // Integer
 
-		$pi = 3.14; # Double
-		$altura = 1.81; # Double
+		$pi = 3.14; // Double
+		$altura = 1.81; // Double
 
 		/*
 			Se um valor é um número, ele é falso somente se for igual a 0.
@@ -39,8 +39,8 @@
 
 		define("YEAR", 2017);
 		print(YEAR . "<br />");
-		# YEAR = 4;
-		# Parse error: syntax error, unexpected '=' in [...]/typedata.php on line ...
+		// YEAR = 4;
+		// Parse error: syntax error, unexpected '=' in [...]/typedata.php on line ...
 		?>
 	</body>
 </html>

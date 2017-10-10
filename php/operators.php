@@ -7,16 +7,16 @@
 	</head>
 	<body>
 		<?php
-		# Operadores aritméticos: + - * / % ++ --
+		// Operadores aritméticos: + - * / % ++ --
 		print(3 + 2);
 		print(4 % 2);
 		print(2 * 8);
 		print(665++);
 
-		# Operadores de comparação: == != > < >= <=
-		# Operadores lógicos: and or && || !
-		# Operadores de atribuição: = += -= *= /= %= .=
-		# Operadores condicionais: "? :"
+		// Operadores de comparação: == != > < >= <=
+		// Operadores lógicos: and or && || !
+		// Operadores de atribuição: = += -= *= /= %= .=
+		// Operadores condicionais: ?: ?? (from php7)
 		?>
 	</body>
 </html>
