@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 	    <title>Uso de classes</title>
 
-	    <?php require("book_class.php"); ?>
+	    <?php require_once("book_class.php"); ?>
 	</head>
 	<body>
 		<?php

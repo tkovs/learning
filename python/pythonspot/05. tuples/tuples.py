@@ -3,7 +3,7 @@
 # Tupla vazia
 empty_tuple = ()
 
-# Tupla de 1 item, a vírgula é necessária)
+# Tupla de 1 item, a vírgula é necessária
 other_tuple = (3,)
 
 # Acesso
