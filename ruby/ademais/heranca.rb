@@ -1,7 +1,6 @@
 #Não há herança múltipla, apenas simples
 
 class Pessoa
-
 	def andar()
 		puts 'Andando...'
 	end
