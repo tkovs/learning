@@ -130,42 +130,42 @@
 		});
 
 	// Spotlights.
-		$('.spotlights > section')
-			.scrollex({
-				mode: 'middle',
-				top: '-10vh',
-				bottom: '-10vh',
-				initialize: function() {
+		// $('.spotlights > section')
+		// 	.scrollex({
+		// 		mode: 'middle',
+		// 		top: '-10vh',
+		// 		bottom: '-10vh',
+		// 		initialize: function() {
 
-					// Deactivate section.
-						$(this).addClass('inactive');
+		// 			// Deactivate section.
+		// 				$(this).addClass('inactive');
 
-				},
-				enter: function() {
+		// 		},
+		// 		enter: function() {
 
-					// Activate section.
-						$(this).removeClass('inactive');
+		// 			// Activate section.
+		// 				$(this).removeClass('inactive');
 
-				}
-			})
-			.each(function() {
+		// 		}
+		// 	})
+		// 	.each(function() {
 
-				var	$this = $(this),
-					$image = $this.find('.image'),
-					$img = $image.find('img'),
-					x;
+		// 		var	$this = $(this),
+		// 			$image = $this.find('.image'),
+		// 			$img = $image.find('img'),
+		// 			x;
 
-				// Assign image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
+		// 		// Assign image.
+		// 			$image.css('background-image', 'url(' + $img.attr('src') + ')');
 
-				// Set background position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
+		// 		// Set background position.
+		// 			if (x = $img.data('position'))
+		// 				$image.css('background-position', x);
 
-				// Hide <img>.
-					$img.hide();
+		// 		// Hide <img>.
+		// 			$img.hide();
 
-			});
+		// 	});
 
 	// Features.
 		$('.features')
