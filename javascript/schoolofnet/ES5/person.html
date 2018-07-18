@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Métodos - ES5</title>
+    </head>
+
+    <body>
+        <script>
+            function Person(name = null)
+            {
+                this.name = name;
+                this.age;
+                this.height;
+
+                this.sayHello = function()
+                {
+                    return 'Hello! My name is '.concat(this.name);
+                }
+            }
+
+            var leonard = new Person('Leonard');
+            leonard.age = 18;
+            console.log(leonard);
+        </script>
+    </body>
+</html>
