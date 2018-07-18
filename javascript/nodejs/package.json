@@ -15,5 +15,8 @@
     "node.js"
   ],
   "author": "tkovs",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "console-log-hello-world": "^1.0.3"
+  }
 }

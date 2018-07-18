@@ -1,5 +1,6 @@
 var http = require('http');
 var handle = require('./handle');
+require('console-log-hello-world');
 
 var server = http.createServer(handle.fn);
 
