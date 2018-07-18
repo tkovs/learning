@@ -26,12 +26,12 @@
                     name = _name
                 }
 
-                this.getAge = function ()
+                this.getAge = function()
                 {
                     return age
                 }
 
-                this.setAge = function (_age)
+                this.setAge = function(_age)
                 {
                     age = _age
                 }
@@ -47,13 +47,23 @@
                 }
             }
 
-            var leonan = new Person()
-            leonan.setName('Leonan')
-            leonan.setAge(23)
-            leonan.setHeight(1.76)
-            leonan.sayHello(leonan.getName())
+            Person.static_method = function()
+            {
+                console.log('This is my first static method')
+            }
 
-            console.log(leonan)
+            Person.static_attr = 'My first attr static'
+
+            var leonard = new Person()
+            leonard.setName('Leonan')
+            leonard.setAge(23)
+            leonard.setHeight(1.76)
+            leonard.sayHello(leonard.getName())
+
+            Person.static_method()
+            console.log(Person.static_attr)
+
+            console.log(leonard)
         </script>
     </body>
 </html>
