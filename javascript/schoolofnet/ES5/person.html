@@ -6,21 +6,54 @@
 
     <body>
         <script>
-            function Person(name = null)
-            {
-                this.name = name;
-                this.age;
-                this.height;
+            function Person() {
+                var name
+                var age
+                var height
 
-                this.sayHello = function()
+                this.sayHello = function(name)
                 {
-                    return 'Hello! My name is '.concat(this.name);
+                    console.log('Hello ' + name)
+                }
+
+                this.getName = function getName()
+                {
+                    return name
+                }
+
+                this.setName = function setName(_name)
+                {
+                    name = _name
+                }
+
+                this.getAge = function ()
+                {
+                    return age
+                }
+
+                this.setAge = function (_age)
+                {
+                    age = _age
+                }
+
+                this.getHeight = function getHeight()
+                {
+                    return height
+                }
+
+                this.setHeight = function setHeight(_height)
+                {
+                    height = _height
                 }
             }
 
-            var leonard = new Person('Leonard');
-            leonard.age = 18;
-            console.log(leonard);
+            var leonan = new Person()
+            leonan.setName('Leonan')
+            leonan.setAge(23)
+            leonan.setHeight(1.76)
+            leonan.sayHello(leonan.getName())
+
+            console.log(leonan)
         </script>
     </body>
 </html>
