@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	i := 1 // or var i int = 1, or var i = 1 (implicit cast right-hand)
+	i := 1 // or var i int = 1, or var i = 1 (inferred from the right-hand side)
 
 	for i <= 3 {
 		fmt.Println(i)
