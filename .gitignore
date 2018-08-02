@@ -17,3 +17,6 @@ test
 #Arduino
 .build/
 Arduino/*/resultado/*.avi
+
+#vscode
+.vscode/
