@@ -1,1 +1,3 @@
-![me](http://i465.photobucket.com/albums/rr14/themishkin/Spiderman/fuck-you-im-spider-man-60s-spiderma.jpg)
+## What is it?
+
+A collection of sources that I wrote while I'm learning
